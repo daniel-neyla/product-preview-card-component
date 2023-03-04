@@ -34,72 +34,56 @@ This is not actually a screenshot of the component I build, but a picture of the
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Click here](https://product-card-jorc.onrender.com)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- CSS
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
-To see how you can add code snippets, see below:
-
+I do not know you specifically call this, but it chooses the appropriate image depending on the screen width only using HTML:
 ```html
-<h1>Some HTML code I'm proud of</h1>
+      <picture>
+        <source
+          media="(max-width: 375px)"
+          srcset="./images/image-product-mobile.jpg"
+        />
+        <source
+          media="(min-width: 376px)"
+          srcset="./images/image-product-desktop.jpg"
+        />
+        <img src="./images/image-product-desktop.jpg" alt="image of product" />
+      </picture>
 ```
+
+The replaced content is sized to maintain its aspect ratio while filling the element's entire content box using CSS:
 ```css
 .proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+  object-fit: cover;
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+
+
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I should learn a little more about responsive images in the future. There is still a lot that i haven't covered or forgotten
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [chat GPT](https://chat.openai.com/) - Powerful AI
+- [Odin Project](https://www.theodinproject.com/) - Free frontend course 
+- [MDN](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) - Helped me with responsive image design
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
-## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
 
